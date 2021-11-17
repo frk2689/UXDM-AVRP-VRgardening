@@ -597,10 +597,7 @@ AnimatorStateMachine:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Grip
-  m_ChildStates:
-  - serializedVersion: 1
-    m_State: {fileID: 1102544609724274744}
-    m_Position: {x: 24, y: 180, z: 0}
+  m_ChildStates: []
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -610,7 +607,7 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 1102544609724274744}
+  m_DefaultState: {fileID: 0}
 --- !u!1107 &1107617238690245714
 AnimatorStateMachine:
   serializedVersion: 5
@@ -663,10 +660,7 @@ AnimatorStateMachine:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: utton 11
-  m_ChildStates:
-  - serializedVersion: 1
-    m_State: {fileID: 1102363758892143746}
-    m_Position: {x: 24, y: 168, z: 0}
+  m_ChildStates: []
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -676,4 +670,4 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 1102363758892143746}
+  m_DefaultState: {fileID: 0}
