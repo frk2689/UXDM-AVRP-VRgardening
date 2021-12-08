@@ -12,12 +12,13 @@ public class PourDetector : MonoBehaviour
     private bool isPouring = false;
     private WaterStream currentStream = null;
 
-    public bool counterIsRunning = false; 
+
     
 
     private void Start()
     {
         pouringSoundEffect = GetComponent<AudioSource>();
+
     }
 
     private void Update()
@@ -32,6 +33,7 @@ public class PourDetector : MonoBehaviour
             if (isPouring)
             {
                 StartPour(); 
+            
 
             }
             else
@@ -49,7 +51,7 @@ public class PourDetector : MonoBehaviour
         currentStream = CreateStream();
         currentStream.Begin();
         pouringSoundEffect.Play();
-        counterIsRunning = true; 
+       
     }
 
     private void EndPour()
@@ -57,7 +59,7 @@ public class PourDetector : MonoBehaviour
         currentStream.End();
         currentStream = null;
         pouringSoundEffect.Stop();
-        counterIsRunning = false; 
+      
     }
 
     private float CalculatePourAngle()

@@ -13,7 +13,7 @@ public class WaterStream : MonoBehaviour
     private float raycastDistance = 10f;
     private float streamSpeed = 1.75f;
 
-    private WaterablePlot currentPlot = null;
+    
     private float waterSpeed = 1f; // waters every 1s
     
     private void Awake()
@@ -32,7 +32,7 @@ public class WaterStream : MonoBehaviour
     {
         StartCoroutine(UpdateParticle());
         pourRoutine = StartCoroutine(BeginPour());
-        StartCoroutine(WaterPlot());
+        
     }
 
     public void End()
@@ -67,22 +67,7 @@ public class WaterStream : MonoBehaviour
         // destroy once the stream has reached the target position, like the ground
         Destroy(gameObject);
     }
-
-    private IEnumerator WaterPlot()
-    {
-        while(!HasReachedPosition(0, targetPosition))
-        {
-            bool isHitting = HasReachedPosition(1, targetPosition);
-            // increment water if the stream has collided onto something, and currentPlot exists
-          
-            if (isHitting && currentPlot != null)
-            {
-                currentPlot.AddWater(1);
-            }
-
-            yield return new WaitForSeconds(waterSpeed);
-        }
-    }
+   
 
     private IEnumerator UpdateParticle()
     {
@@ -110,21 +95,12 @@ public class WaterStream : MonoBehaviour
         if (hit.collider)
         {
             endPoint = hit.point;
-
-            // assign currentPlot if the stream is going to hit a plot
-            if (hit.collider.gameObject.CompareTag("Waterable"))
-            {
-                currentPlot = hit.collider.GetComponent<WaterablePlot>();
-            } 
-            else 
-            {
-                currentPlot = null;
-            }
+            
         }
         else 
         {
             endPoint = ray.GetPoint(raycastDistance);
-            currentPlot = null;
+           
         }
 
         return endPoint;
