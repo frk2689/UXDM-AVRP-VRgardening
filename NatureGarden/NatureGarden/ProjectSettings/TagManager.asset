@@ -12,6 +12,7 @@ TagManager:
   - Target
   - Harvestable
   - Plant
+  - WaterCollider
   layers:
   - Default
   - TransparentFX
