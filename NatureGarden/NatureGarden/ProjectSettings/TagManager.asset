@@ -13,6 +13,8 @@ TagManager:
   - Harvestable
   - Plant
   - WaterCollider
+  - seed blue
+  - seed red
   layers:
   - Default
   - TransparentFX
